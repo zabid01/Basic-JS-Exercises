@@ -1,14 +1,14 @@
 # Basic JS Exercises
 
-### Exercise 1: Percentage
+### Exercise 1: Area of Rectangle
 
-**Write a JavaScript function to calculate the percentage (%) of a given number.**
+**Write a JavaScript function to calculate the area of a rectangle given the length and width.**
 
 Test:
-console.log(percentage(2000, 37.12));
+console.log(areaRectangle(10, 20));
 
 Output:
-742.4
+200
 
 ------
 
@@ -33,17 +33,17 @@ HINT: Use *substring()*
 
 ------
 
-### Exercise 3: Remove First Occurence
+### Exercise 3: Hide part of email address
 
-**Write a JavaScript function to remove the first occurrence of a given 'search string' from a string.**
+**Write a JavaScript function to hide email addresses to protect from unauthorized user.**
 
 Test:
-console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
+console.log(protect_email("tom_jenkins@example.com"));
 
 Output:
-"The quick brown fox jumps over lazy dog"
+"tom...@example.com"
 
-HINT: Use *indexOf()* and *slice()*
+HINT: Use *split()* and *substring()*
 
 ------
 
@@ -61,40 +61,27 @@ HINT: Use *join()*, *split()* and *sort()*
 
 ------
 
-### Exercise 5: Most Frequent Item
+### Exercise 5: Remove Duplicate Values
 
-**Write a JavaScript function to find the most frequent item in a given array.**
+**Write a JavaScript program to find and remove duplicate values in a JavaScript array.**
 
 Test:
-most_frequent([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
+remove_duplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
 
 Output:
-a occurs 5 times
+[3, 'a', 2, 4, 9]
 
 ------
 
-### Exercise 6: FizzBuzz
+### Exercise 6: Dash between Even Numbers
 
-**Write a JavaScript function which iterates the integers from 1 to n. For multiples of three print "Fizz" beside the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".**
+**Write a JavaScript program which accepts a number as input and inserts dashes (-) between two consecutive even numbers.**
 
 Test:
-fizzbuzz(16);
+dash_in_even(012345684);
 
 Output:
-
-3 Fizz
-
-5 Buzz
-
-6 Fizz
-
-9 Fizz
-
-10 Buzz
-
-12 Fizz
-
-15 FizzBuzz
+"012-456-8-4"  
 
 ------
 

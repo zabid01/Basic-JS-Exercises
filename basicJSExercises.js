@@ -1,25 +1,25 @@
 /* ---------------------------
 
-*** #1 Percentage ***
+*** #1 Area of Rectangle ***
 
-Write a JavaScript function to calculate the percentage (%) of a given number.
+Write a JavaScript function to calculate the area of a rectangle given the length and width.
 
 Test:
-console.log(percentage(2000, 37.12));
+console.log(areaRectangle(10, 20));
 
 Output:
-742.4
+200
 
  --------------------------- */
 
-function percentage(number, percentage) {
+function areaRectangle(length, width) {
   return "No code yet";
 }
-console.log("Percentage Calculator:");
+console.log("Rectangle Area Calculator:");
 /* Uncomment the following to check */
-  // console.log(percentage(2000, 37.12));
-  // console.log(percentage(450, 56.5));
-  // console.log(percentage(5230, 34));
+  // console.log(areaRectangle(2, 7));
+  // console.log(areaRectangle(20, 56.5));
+  // console.log(areaRectangle(50, 34));
 
 
 
@@ -57,28 +57,28 @@ console.log("Rotate String:");
 
 /* ---------------------------
 
-*** #3 Remove First Occurence ***
+*** #3 Hide part of email address ***
 
-Write a JavaScript function to remove the first occurrence of a given 'search string' from a string.
+Write a JavaScript function to hide email addresses to protect from unauthorized user.
 
 Test:
-console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
+console.log(protect_email("tom_jenkins@example.com"));
 
 Output:
-"The quick brown fox jumps over lazy dog"
+"tom...@example.com"
 
-HINT: Use indexOf() and slice()
+HINT: Use split() and substring()
 
  --------------------------- */
 
-function remove_first_occurrence(text, searchstring) {
-  return "edited text";
+function protect_email(email) {
+  return "protected email";
 }
 
-console.log("Remove First Occurrence:");
+console.log("Protected email:");
 /* Uncomment the following to check */
-  //console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
-
+  //console.log(protect_email("harry_potter@gmail.com"));
+  //console.log(protect_email("sarah.connor@gmail.com"));
 
 
 
@@ -94,7 +94,7 @@ console.log(alphabetic_order('webmaster'));
 Output:
 abeemrstw
 
-HINT: Use join(), split() and sort() fucntions
+HINT: Use join(), split() and sort() functions
  --------------------------- */
 
 function alphabetic_order(word) {
@@ -110,69 +110,51 @@ console.log("Alphabetic Order:");
 
 /* ---------------------------
 
-*** #5 Most Frequent Item ***
+*** #5 Remove Duplicate Values ***
 
-Write a JavaScript function to find the most frequent item in a given array.
+Write a JavaScript program to find and remove duplicate values in a JavaScript array.
 
 Test:
-most_frequent([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
+remove_duplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
 
 Output:
-a occurs 5 times
+[3, 'a', 2, 4, 9]
 
  --------------------------- */
 
-function most_frequent(arr) {
-  console.log("Most frequently occuring item in arr");
+function remove_duplicates(arr) {
+  console.log("Duplicates removed from array");
 }
 
-console.log("Most Frequent Item:");
+console.log("Remove Duplicate Values:");
 /* Uncomment the following to check */
-  // most_frequent([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
-
-
+  // remove_duplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
 
 
 /* ---------------------------
 
-*** #6 FizzBuzz ***
+*** #6 Dash between Even Numbers ***
 
-Write a JavaScript function which iterates the integers from 1 to n.
-But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz".
-For numbers which are multiples of both three and five print "FizzBuzz".
+Write a JavaScript program which accepts a number as input and inserts dashes (-) between two consecutive even numbers.
 
 Test:
-fizzbuzz(16);
+dash_in_even(012345684);
 
 Output:
-  1
-  2
-  3 Fizz
-  4
-  5 Buzz
-  6 Fizz
-  7
-  8
-  9 Fizz
-  10 Buzz
-  11
-  12 Fizz
-  13
-  14
-  15 FizzBuzz
-  16
+"012-456-8-4"
 
  --------------------------- */
 
-function fizzbuzz(n) {
-  console.log("Print the Fizz, Buzz and FizzBuzz numbers in 1 to n");
+function dash_in_even(number) {
+  console.log("even numbers separated by dashes");
 }
 
-console.log("FizzBuzz:");
+console.log("Dash between Even Numbers:");
 /* Uncomment the following to check */
-  // fizzbuzz(100);
-
-
+  // dash_in_even(100);
+  // dash_in_even(1356);
+  // dash_in_even(246824);
+  // dash_in_even(1324567824);
 
 
 /* ---------------------------
