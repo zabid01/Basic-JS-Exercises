@@ -65,7 +65,7 @@ Test:
 console.log(protect_email("tom_jenkins@example.com"));
 
 Output:
-"tom...@example.com"
+"tom_j...@example.com"
 
 HINT: Use split() and substring()
 
