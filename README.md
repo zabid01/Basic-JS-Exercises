@@ -1,20 +1,20 @@
 # Basic JS Exercises
 
-### Exercise 1: Area of Rectangle
+### Exercise 1: Area of Triangle
 
-**Write a JavaScript function to calculate the area of a rectangle given the length and width.**
+**Write a JavaScript function to calculate the area of a triangle given the base and height.**
 
 Test:
-console.log(areaRectangle(10, 20));
+console.log(areaTriangle(10, 20));
 
 Output:
-200
+100
 
 ------
 
 ### Exercise 2: Rotate String
 
-**Rotate a given string in the right direction by periodically removing one letter from the end of the string and attaching it to the front.**
+**Rotate a given string in the left direction by periodically removing one letter from the beginning of the string and attaching it to the end.**
 
 Test:
 rotateString("cat");
@@ -23,9 +23,9 @@ Output:
 
 cat
 
-tca
-
 atc
+
+tca
 
 cat
 
@@ -73,15 +73,17 @@ Output:
 
 ------
 
-### Exercise 6: Dash between Even Numbers
+### Exercise 6: Dash between ODD Numbers
 
-**Write a JavaScript program which accepts a number as input and inserts dashes (-) between two consecutive even numbers.**
+**Write a JavaScript program which accepts a number as input and inserts dashes (-) between two consecutive odd numbers.**
 
 Test:
-dash_in_even(012345684);
+dash_in_odd(013247568);
 
 Output:
-"012-456-8-4"  
+"01-3247-568"
+
+HINT: Use *toString()* and *parseInt()* functions 
 
 ------
 

@@ -1,25 +1,25 @@
 /* ---------------------------
 
-*** #1 Area of Rectangle ***
+*** #1 Area of Triangle ***
 
-Write a JavaScript function to calculate the area of a rectangle given the length and width.
+Write a JavaScript function to calculate the area of a triangle given the base and height.
 
 Test:
-console.log(areaRectangle(10, 20));
+console.log(areaTriangle(10, 20));
 
 Output:
-200
+100
 
  --------------------------- */
 
-function areaRectangle(length, width) {
+function areaTriangle(base, height) {
   return "No code yet";
 }
-console.log("Rectangle Area Calculator:");
+console.log("Triangle Area Calculator:");
 /* Uncomment the following to check */
-  // console.log(areaRectangle(2, 7));
-  // console.log(areaRectangle(20, 56.5));
-  // console.log(areaRectangle(50, 34));
+  // console.log(areaTriangle(2, 7));
+  // console.log(areaTriangle(20, 56.5));
+  // console.log(areaTriangle(50, 34));
 
 
 
@@ -28,16 +28,16 @@ console.log("Rectangle Area Calculator:");
 
 *** #2 Rotate String ***
 
-Rotate a given string in the right direction by periodically removing
-one letter from the end of the string and attaching it to the front.
+Rotate a given string in the left direction by periodically removing
+one letter from the beginning of the string and attaching it to the end.
 
 Test:
 rotateString("cat");
 
 Output:
 cat
-tca
 atc
+tca
 cat
 
 HINT: Use substring()
@@ -104,6 +104,7 @@ function alphabetic_order(word) {
 console.log("Alphabetic Order:");
 /* Uncomment the following to check */
   // console.log(alphabetic_order("webmaster"));
+  // console.log(alphabetic_order("textbook"));
 
 
 
@@ -133,28 +134,29 @@ console.log("Remove Duplicate Values:");
 
 /* ---------------------------
 
-*** #6 Dash between Even Numbers ***
+*** #6 Dash between Odd Numbers ***
 
-Write a JavaScript program which accepts a number as input and inserts dashes (-) between two consecutive even numbers.
+Write a JavaScript program which accepts a number as input and inserts dashes (-) between two consecutive odd numbers.
 
 Test:
-dash_in_even(012345684);
+dash_in_odd(013247568);
 
 Output:
-"012-456-8-4"
+"01-3247-568"
 
+HINT: Use toString() and parseInt() functions
  --------------------------- */
 
-function dash_in_even(number) {
-  console.log("even numbers separated by dashes");
+function dash_in_odd(number) {
+  console.log("odd numbers separated by dashes");
 }
 
-console.log("Dash between Even Numbers:");
+console.log("Dash between ODD Numbers:");
 /* Uncomment the following to check */
-  // dash_in_even(100);
-  // dash_in_even(1356);
-  // dash_in_even(246824);
-  // dash_in_even(1324567824);
+  dash_in_odd(100);
+  dash_in_odd(1356);
+  dash_in_odd(13790);
+  dash_in_odd(132459784);
 
 
 /* ---------------------------
