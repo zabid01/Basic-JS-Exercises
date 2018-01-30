@@ -1,43 +1,60 @@
 /* ---------------------------
+*** #1 Percentage ***
 
-*** #1 Area of Triangle ***
+Write a JavaScript function to calculate the percentage (%) of a given number.
+
+Test:
+console.log(percentage(2000, 37.12));
+
+Output:
+742.4
+ --------------------------- */
+
+function percentage(number, percentage) {
+  return "No code yet";
+}
+console.log("Percentage Calculator:");
+/* Uncomment the following to check */
+  // console.log(percentage(2000, 37.12));
+  // console.log(percentage(450, 56.5));
+  // console.log(percentage(5230, 34));
+
+
+/* ---------------------------
+*** #2 Area of Triangle ***
 
 Write a JavaScript function to calculate the area of a triangle given the base and height.
 
 Test:
-console.log(areaTriangle(10, 20));
+console.log(areaTriangle(5, 20));
 
 Output:
-100
-
+50
  --------------------------- */
 
-function areaTriangle(base, height) {
-  return "No code yet";
-}
-console.log("Triangle Area Calculator:");
-/* Uncomment the following to check */
-  // console.log(areaTriangle(2, 7));
-  // console.log(areaTriangle(20, 56.5));
-  // console.log(areaTriangle(50, 34));
-
-
+ function areaTriangle(base, height) {
+   return "No code yet";
+ }
+ console.log("Triangle Area Calculator:");
+ /* Uncomment the following to check */
+   // console.log(areaTriangle(2, 7));
+   // console.log(areaTriangle(20, 56.5));
+   // console.log(areaTriangle(50, 34));
 
 
 /* ---------------------------
+*** #3 Rotate String ***
 
-*** #2 Rotate String ***
-
-Rotate a given string in the left direction by periodically removing
-one letter from the beginning of the string and attaching it to the end.
+Rotate a given string in the right direction by periodically removing
+one letter from the end of the string and attaching it to the front.
 
 Test:
 rotateString("cat");
 
 Output:
 cat
-atc
 tca
+atc
 cat
 
 HINT: Use substring()
@@ -50,14 +67,11 @@ function rotate_string(text) {
 console.log("Rotate String:");
 /* Uncomment the following to check */
   //rotate_string("cat");
-  //rotate_string("voracious")
-
-
+  //rotate_string("pseudonym")
 
 
 /* ---------------------------
-
-*** #3 Hide part of email address ***
+*** #4 Hide part of email address ***
 
 Write a JavaScript function to hide email addresses to protect from unauthorized user.
 
@@ -68,7 +82,6 @@ Output:
 "tom_j...@example.com"
 
 HINT: Use split() and substring()
-
  --------------------------- */
 
 function protect_email(email) {
@@ -81,18 +94,40 @@ console.log("Protected email:");
   //console.log(protect_email("sarah.connor@gmail.com"));
 
 
+/* ---------------------------
+*** #5 Remove First Occurence ***
+
+Write a JavaScript function to remove the first occurrence of a given 'search string' from a string.
+
+Test:
+console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
+
+Output:
+"The quick brown fox jumps over lazy dog"
+
+HINT: Use indexOf() and slice()
+ --------------------------- */
+
+function remove_first_occurrence(text, searchstring) {
+  return "edited text";
+}
+
+console.log("Remove First Occurrence:");
+/* Uncomment the following to check */
+  //console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
+  //console.log(remove_first_occurrence("Drastic times call for drastic measures", 'drastic'));
+
 
 /* ---------------------------
-
-*** #4 Alphabetical Order ***
+*** #6 Alphabetical Order ***
 
 Write a JavaScript function that returns a passed string with letters in alphabetical order.
 
 Test:
-console.log(alphabetic_order('webmaster'));
+console.log(alphabetic_order('textbook'));
 
 Output:
-abeemrstw
+bekoottx
 
 HINT: Use join(), split() and sort() functions
  --------------------------- */
@@ -103,15 +138,35 @@ function alphabetic_order(word) {
 
 console.log("Alphabetic Order:");
 /* Uncomment the following to check */
-  // console.log(alphabetic_order("webmaster"));
   // console.log(alphabetic_order("textbook"));
-
-
+  // console.log(alphabetic_order("webmaster"));
+  // console.log(alphabetic_order("supercalifragilisticexpialidocious"));
 
 
 /* ---------------------------
+*** #7 Most Frequent Item ***
 
-*** #5 Remove Duplicate Values ***
+Write a JavaScript function to find the most frequent item in a given array.
+
+Test:
+most_frequent([3, 'c', 'c', 'c', 2, 3, 'c', 3, 'c', 2, 4, 9, 3]);
+
+Output:
+c occurs 5 times
+ --------------------------- */
+
+function most_frequent(arr) {
+  console.log("Most frequently occuring item in arr");
+}
+
+console.log("Most Frequent Item:");
+/* Uncomment the following to check */
+  // most_frequent([3, 'c', 'c', 'c', 2, 3, 'c', 3, 'c', 2, 4, 9, 3]);
+  // most_frequent([7, 2, 'ax', '9', 9, 'ax', 'ax']);
+
+
+/* ---------------------------
+*** #8 Remove Duplicate Values ***
 
 Write a JavaScript program to find and remove duplicate values in a JavaScript array.
 
@@ -120,7 +175,6 @@ remove_duplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
 
 Output:
 [3, 'a', 2, 4, 9]
-
  --------------------------- */
 
 function remove_duplicates(arr) {
@@ -130,45 +184,41 @@ function remove_duplicates(arr) {
 console.log("Remove Duplicate Values:");
 /* Uncomment the following to check */
   // remove_duplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
+  // remove_duplicates([4, 4, 4, 5, 's', 8, 's']);
 
 
 /* ---------------------------
+*** #9 Dash between Even Numbers ***
 
-*** #6 Dash between Odd Numbers ***
-
-Write a JavaScript program which accepts a number as input and inserts dashes (-) between two consecutive odd numbers.
+Write a JavaScript program which accepts a number as input and inserts dashes (-) between two consecutive even numbers.
 
 Test:
-dash_in_odd(013247568);
+dash_in_even(012345684);
 
 Output:
-"01-3247-568"
-
-HINT: Use toString() and parseInt() functions
+"012-456-8-4"
  --------------------------- */
 
-function dash_in_odd(number) {
-  console.log("odd numbers separated by dashes");
+function dash_in_even(number) {
+  console.log("even numbers separated by dashes");
 }
 
-console.log("Dash between ODD Numbers:");
+console.log("Dash between Even Numbers:");
 /* Uncomment the following to check */
-  dash_in_odd(100);
-  dash_in_odd(1356);
-  dash_in_odd(13790);
-  dash_in_odd(132459784);
+  // dash_in_even(100);
+  // dash_in_even(1356);
+  // dash_in_even(246824);
+  // dash_in_even(1324567824);
 
 
 /* ---------------------------
-
-*** #7 Guessing Game ***
+*** #10 Guessing Game ***
 
 Write a JavaScript program where the program takes a random integer between 1 to 10,
 the user is then prompted to input a guess number. If the user input matches with guess number,
 the program will display a message "Good Work" otherwise display a message "Not matched"
 
 HINT: Use Math.ceil() and Math.random()
-
  --------------------------- */
 
 function guessing_game(guess) {
