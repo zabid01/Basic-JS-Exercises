@@ -10,6 +10,7 @@ Output:
 742.4
  --------------------------- */
 
+
 function percentage(number, percentage) {
   return number*(percentage/100);
 }
@@ -91,14 +92,31 @@ HINT: Use split() and substring()
  --------------------------- */
 
 function protect_email(email) {
-  return "protected email";
+  var flag= email.search("_");
+  if (flag>1)
+  {
+    var a=email.indexOf("_");
+    var b=email.indexOf("@");
+    var first=email.slice(email[0],a+2 );
+    var last=email.slice(b ,email.length);
+    var pEmail= first  + "..." + last ;
+  }
+  else
+  {
+    var a=email.indexOf(".");
+    var b=email.indexOf("@");
+    var first=email.slice(email[0],a+2 );
+    var last=email.slice(b ,email.length);
+    var pEmail= first  + "..." + last ;
+  }
+  return pEmail;
 }
 
 console.log("Protected email:");
 /* Uncomment the following to check */
-  //console.log(protect_email("harry_potter@gmail.com"));
-  //console.log(protect_email("sarah.connor@gmail.com"));
-
+  console.log(protect_email("harry_potter@gmail.com"));
+  console.log(protect_email("sarah.connor@gmail.com"));
+  console.log(protect_email("tom_jenkins@example.com"));
 
 /* ---------------------------
 *** #5 Remove First Occurence ***
@@ -115,13 +133,21 @@ HINT: Use indexOf() and slice()
  --------------------------- */
 
 function remove_first_occurrence(text, searchstring) {
-  return "edited text";
+  // WAY 1:
+  var s= " " + searchstring + " ";
+  var n = text.replace(s," ");
+
+// WAY 2:
+var a=text.indexOf(searchstring);
+var b= text.slice(text[0], a-1);
+var c= text.slice(a+searchstring.length, text.length);
+  return b+c;
 }
 
 console.log("Remove First Occurrence:");
 /* Uncomment the following to check */
-  //console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
-  //console.log(remove_first_occurrence("Drastic times call for drastic measures", 'drastic'));
+  console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
+  console.log(remove_first_occurrence("Drastic times call for drastic measures", 'drastic'));
 
 
 /* ---------------------------
@@ -139,14 +165,23 @@ HINT: Use join(), split() and sort() functions
  --------------------------- */
 
 function alphabetic_order(word) {
-  return "rearranged word";
+  // var a= word.sort();
+  var arr = word.split("");
+  var a= arr.sort();
+  var t ="";
+  for (var i = 0; i < a.length; i++) {
+        t = t + a[i] ;
+  }
+  return t;
 }
+
+
 
 console.log("Alphabetic Order:");
 /* Uncomment the following to check */
-  // console.log(alphabetic_order("textbook"));
-  // console.log(alphabetic_order("webmaster"));
-  // console.log(alphabetic_order("supercalifragilisticexpialidocious"));
+  console.log(alphabetic_order("textbook"));
+  console.log(alphabetic_order("webmaster"));
+  console.log(alphabetic_order("supercalifragilisticexpialidocious"));
 
 
 /* ---------------------------
@@ -161,14 +196,29 @@ Output:
 c occurs 5 times
  --------------------------- */
 
-function most_frequent(arr) {
-  console.log("Most frequently occuring item in arr");
-}
+
+  function most_frequent(arr) {
+      var a = 0;
+      var b = 1;
+      var item;
+      for (var i=0; i<arr.length; i++){
+              for (var j=i; j<arr.length; j++){
+                      if (arr[i] == arr[j])
+                       a++;
+                      if (b<a){
+                        b=a;
+                        item = arr[i];
+                      }
+              }
+              a=0;
+      }
+      console.log("Most frequently occuring item in array: "+ item+" ( " +b +" times ) ") ;
+  }
 
 console.log("Most Frequent Item:");
 /* Uncomment the following to check */
-  // most_frequent([3, 'c', 'c', 'c', 2, 3, 'c', 3, 'c', 2, 4, 9, 3]);
-  // most_frequent([7, 2, 'ax', '9', 9, 'ax', 'ax']);
+  most_frequent([3, 'c', 'c', 'c', 2, 3, 'c', 3, 'c', 2, 4, 9, 3]);
+  most_frequent([7, 2, 'ax', '9', 9, 'ax', 'ax']);
 
 
 /* ---------------------------
@@ -184,6 +234,9 @@ Output:
  --------------------------- */
 
 function remove_duplicates(arr) {
+
+
+
   console.log("Duplicates removed from array");
 }
 
@@ -206,14 +259,24 @@ Output:
  --------------------------- */
 
 function dash_in_even(number) {
-  console.log("even numbers separated by dashes");
+
+
+  for(var i=0; i<a.length; i++){
+    var a=  number/10
+    if (a[i]%2==0){
+       b[i]=a[i] + "-";
+    }
+    else
+    b[i]= a[i];
+  }
+  console.log("even numbers separated by dashes: " + b);
 }
 
 console.log("Dash between Even Numbers:");
 /* Uncomment the following to check */
   // dash_in_even(100);
   // dash_in_even(1356);
-  // dash_in_even(246824);
+  dash_in_even(246824);
   // dash_in_even(1324567824);
 
 
