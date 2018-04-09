@@ -234,16 +234,23 @@ Output:
  --------------------------- */
 
 function remove_duplicates(arr) {
-
-
-
   console.log("Duplicates removed from array");
+  let unique_array = []
+    for(let i = 0;i < arr.length; i++){
+        if(unique_array.indexOf(arr[i]) == -1){
+            unique_array.push(arr[i])
+        }
+    }
+
+
+
+console.log(unique_array);
 }
 
 console.log("Remove Duplicate Values:");
 /* Uncomment the following to check */
-  // remove_duplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
-  // remove_duplicates([4, 4, 4, 5, 's', 8, 's']);
+  remove_duplicates([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]);
+  remove_duplicates([4, 4, 4, 5, 's', 8, 's']);
 
 
 /* ---------------------------
@@ -259,25 +266,30 @@ Output:
  --------------------------- */
 
 function dash_in_even(number) {
+  console.log("even numbers separated by dashes");
+  var str = number.toString();
+  var result = [str[0]];
 
-
-  for(var i=0; i<a.length; i++){
-    var a=  number/10
-    if (a[i]%2==0){
-       b[i]=a[i] + "-";
-    }
+for(var x=1; x<str.length; x++)
+  {
+    if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+     {
+      result.push('-', str[x]);
+     }
     else
-    b[i]= a[i];
+     {
+      result.push(str[x]);
+     }
   }
-  console.log("even numbers separated by dashes: " + b);
+console.log(result.join(''));
 }
 
 console.log("Dash between Even Numbers:");
 /* Uncomment the following to check */
   // dash_in_even(100);
-  // dash_in_even(1356);
+  dash_in_even(1356);
   dash_in_even(246824);
-  // dash_in_even(1324567824);
+  dash_in_even(1324567824);
 
 
 /* ---------------------------
@@ -291,12 +303,16 @@ HINT: Use Math.ceil() and Math.random()
  --------------------------- */
 
 function guessing_game(guess) {
-  // Get a random integer from 1 to 10 inclusive
-  console.log("matched or unmatched?");
+  var num = Math.ceil(Math.random() * 10);
+
+   if (guess == num)
+     alert('Good Work');
+    else
+     alert('Not matched, the number was ' + num);
 }
 
 console.log("Guessing Game:");
 /* Uncomment the following to check */
-  // var guess = prompt('Guess the number between 1 and 10 inclusive');
-  // console.log("User guessed: "+ guess);
-  // guessing_game(guess);
+  var guess = prompt('Guess the number between 1 and 10 inclusive');
+  console.log("User guessed: "+ guess);
+  guessing_game(guess);
